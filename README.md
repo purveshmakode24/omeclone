@@ -2,4 +2,4 @@
 Let's Start Instant Messaging. Chat Room for Active Users.
 
 ### Live Demo
-https://ome-clone.herokuapp.com/
+https://omeclone123.herokuapp.com/
