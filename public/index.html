@@ -155,7 +155,7 @@
         #user {
             float: left;
             border: 1px #ccc solid;
-            border-radius: 10px;
+            border-radius: 7px 1px 1px 7px;
             background: #f4f4f4;
             padding: 10px;
             margin-left: 20px;
@@ -167,7 +167,7 @@
 
             border: 1px #ccc solid;
             border-radius: 10px;
-            padding: 10px;
+            padding: 10px 10px 10px 10px;
             position: fixed;
             top: 50%;
             left: 50%;
@@ -179,9 +179,17 @@
         }
 
         .online-users-sec {
-            margin-left: 0;
+            padding: 5px;
             font-size: 20px;
             border: 1px #ccc solid;
+            margin-bottom: 10px;
+            float: left;
+
+            border-radius: 10px;
+            background: lightgreen;
+
+            width: 150px;
+            max-height: 200px;
         }
 
         .space {
@@ -191,9 +199,10 @@
         #user {
             text-align: center;
             width: auto;
-            overflow: auto;
             color: green;
-
+            overflow: auto;
+            margin-top: 20px;
+            margin-left: 30px;
         }
 
         #user h3 {
@@ -206,13 +215,14 @@
         #error {
             background: #FF9494;
             margin-bottom: 10px;
+            font-size: small;
         }
 
-        @media all {
-            #user {
-                margin-top: 10px;
-            }
+        .lead {
+            font-size: 19px;
         }
+
+
     </style>
 </head>
 
@@ -230,12 +240,13 @@
         <div id="name">
             <br>
             <h1 class="cover-heading">OMECLONE</h1>
-            <p class="lead">Let's Start Instant Messaging. Chat Room for Active Users.<br> No Registration, Stay
-                Anonymous!</p>
+            <p class="lead">Let's Start Instant Messaging. Chat Room for Active Users.<br> <span
+                    style="font-size: small">No Registration, Stay
+                Anonymous!</span></p>
             <form id="usernameForm">
                 <div class="form-group">
                     <div class="col-md-12">
-                        <label style="margin-top: 5px; font-size: 20px">Create Username</label>
+                        <label style="font-size: 20px">Create Username</label>
                         <div id="error"></div>
                         <div class="input-group">
                             <div class="input-group-prepend">
@@ -253,7 +264,6 @@
                 </div>
             </form>
         </div>
-
         <div id="main">
             <h1 class="cover-heading">OMECLONE</h1>
             <br>
@@ -272,17 +282,16 @@
                     </div>
                 </form>
             </div>
-
             <div id="user">
                 <div class="online-users-sec">Online Users</div>
                 <div class="space"></div>
-                <div id="users"></div>
+                <div id="users" class="users"></div>
             </div>
         </div>
     </main>
     <br>
     <br>
-    <footer class="mastfoot mt-auto">
+    <footer class="mastfoot mt-auto foot">
         <small>
             <div class="inner">
                 &copy; 2018 Omeclone | All Rights Reserved | Made with ❤ by <a
