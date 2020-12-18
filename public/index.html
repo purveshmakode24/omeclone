@@ -13,12 +13,10 @@
     <!-- Bootstrap core CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
           integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
-
     <!-- Custom styles for this template -->
+    
     <style>
-        /*
- * Globals
- */
+        /** Globals */
 
         /* Links */
         a,
@@ -53,7 +51,7 @@
             color: #fff;
             text-shadow: 0 .05rem .1rem rgba(0, 0, 0, .5);
             box-shadow: inset 0 0 5rem rgba(0, 0, 0, .5);
-            background-image: url("http://www.ie-wallpapers.com/data/out/187/35944259-plain-backgrounds.jpg");
+            background-image: url('https://www.wallpapertip.com/wmimgs/231-2312731_chat-background-wallpaper.jpg');
         }
 
         .cover-container {
@@ -124,47 +122,20 @@
 
         /* CUSTOM CSS*/
 
-        .container1 {
-            max-width: 700px;
-            margin: 0 auto;
-        }
-
-        #chatWindow {
-            padding-left: 5px;
-            text-align: left;
-            height: 550px;
-            width: 350px;
+         #chatWindow {
+   
+            max-height: 490px;
+            width: 60vw;
             overflow: auto;
-            color: #333333;
-            background-image: url("https://user-images.githubusercontent.com/15075759/28719144-86dc0f70-73b1-11e7-911d-60d70fcded21.png");
+    
+           /*background-image: url("https://user-images.githubusercontent.com/15075759/28719144-86dc0f70-73b1-11e7-911d-60d70fcded21.png");*/
         }
-
+  
         #main {
             display: none;
         }
 
-        #chat {
-            float: left;
-            border: 1px #ccc solid;
-            border-radius: 10px;
-            background: #f4f4f4;
-            padding: 10px;
-
-        }
-
-        #user {
-            float: left;
-            border: 1px #ccc solid;
-            border-radius: 7px 1px 1px 7px;
-            background: #f4f4f4;
-            padding: 10px;
-            margin-left: 20px;
-            width: 150px;
-            max-height: 200px;
-        }
-
         #name {
-
             border: 1px #ccc solid;
             border-radius: 10px;
             padding: 10px 10px 10px 10px;
@@ -172,44 +143,12 @@
             top: 50%;
             left: 50%;
             transform: translate(-50%, -50%);
+            background-color: #18222C;
+            min-width: 270px;
         }
 
         input {
             height: 30px;
-        }
-
-        .online-users-sec {
-            padding: 5px;
-            font-size: 20px;
-            border: 1px #ccc solid;
-            margin-bottom: 10px;
-            float: left;
-
-            border-radius: 10px;
-            background: lightgreen;
-
-            width: 150px;
-            max-height: 200px;
-        }
-
-        .space {
-            height: 4px;
-        }
-
-        #user {
-            text-align: center;
-            width: auto;
-            color: green;
-            overflow: auto;
-            margin-top: 20px;
-            margin-left: 30px;
-        }
-
-        #user h3 {
-            border: 1px #ccc solid;
-            border-radius: 2px;
-            text-align: center;
-            color: darkgreen;
         }
 
         #error {
@@ -220,32 +159,280 @@
 
         .lead {
             font-size: 19px;
+            padding-left: 15px;
+            padding-right: 15px;
         }
 
+		.forusersautoflow {
+			overflow: auto;
+    		max-height: 482px;
+		}
+
+        @media(max-width: 550px) {
+        	.lead {
+        		font-size: 15px;
+        		padding-left: 2px;
+            	padding-right: 2px;
+        }
+        	}
+
+        	.cover-heading {
+        		font-size: 2.0rem;
+        		padding-bottom: 10px;
+        	}
+        }
 
     </style>
+
+ <style class="cp-pen-styles">* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Nunito', sans-serif;
+}
+
+html, body {
+ /* background: -webkit-linear-gradient(330deg, #000, #f0a6ca);*/
+  /*background: linear-gradient(120deg, #000, #f0a6ca);*/
+  overflow: hidden;
+}
+
+.container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  height: 80vh;
+  width: 10vw;
+}
+
+.container h1 {
+  color: #FFF;
+  text-align: center;
+}
+
+.chatbox {
+  /*background: rgba(255, 255, 255, 0.05);*/
+  background:rgb(2 3 12 / 72%);
+  /*width: 600px;*/
+  width: 80vw;
+  /*height: 75%;*/
+  min-height: 528px;
+  max-height: 535px;
+  border-radius: 0.2em;
+  position: relative;
+  box-shadow: 1px 1px 12px rgba(0, 0, 0, 0.1);
+}
+
+
+.chatbox__messages:nth-of-type(odd) .chatbox__messages__user-message--ind-message {
+  float: right;
+}
+
+.chatbox__messages:nth-of-type(odd) .chatbox__messages__user-message--ind-message:after {
+  content: '';
+  position: absolute;
+  margin: -1.5em -17.06em;
+  width: 0;
+  height: 0;
+  border-top: 10px solid transparent;
+  border-bottom: 10px solid transparent;
+  border-right: 10px solid rgba(255, 255, 255, 0.2);
+}
+
+/*.chatbox__messages:nth-of-type(even) .chatbox__messages__user-message--ind-message {
+  float: left;
+}*/
+
+/*.chatbox__messages:nth-of-type(even) .chatbox__messages__user-message--ind-message:after {
+  content: '';
+  position: absolute;
+  margin: -1.5em 1.87em;
+  width: 0;
+  height: 0;
+  border-top: 10px solid transparent;
+  border-bottom: 10px solid transparent;
+  border-left: 10px solid rgba(255, 255, 255, 0.2);
+}*/
+
+.chatbox__messages__user-message {
+  width: 450px;
+}
+
+.chatbox__messages__user-message--ind-message {
+  background: rgba(255, 255, 255, 0.2);
+  padding: 0.7em 0;
+  height: auto;
+  width: 65%;
+  border-radius: 5px;
+  margin: 1em 1em;
+  overflow: auto;
+}
+
+.chatbox__messages__user-message--ind-message > p.name {
+  color: #FFF;
+  font-size: 1em;
+}
+
+.chatbox__messages__user-message--ind-message > p.message {
+  color: #FFF;
+  font-size: 0.7em;
+  margin: 0 2.8em;
+}
+
+.chatbox__user-list {
+  /*background: rgba(255, 255, 255, 0.1);*/
+  background: #010113ad;
+  width: 25%;
+  height: 100%;
+  float: right;
+  border-top-right-radius: 0.2em;
+  border-bottom-right-radius: 0.2em;
+/*  overflow: auto;*/
+}
+
+.chatbox__user-list h1 {
+  background: rgba(255, 255, 255, 0.05);
+  color: rgba(255, 255, 255, 0.9);
+  font-size: 0.9em;
+  padding: 1em;
+  margin: 0;
+  font-weight: 300;
+  text-align: center;
+}
+
+.chatbox__user, .chatbox__user--active, .chatbox__user--busy, .chatbox__user--away {
+  width: 0.5em;
+  height: 0.5em;
+  border-radius: 100%;
+  margin: 1em 0.7em;
+}
+
+.chatbox__user--active {
+  background: rgba(23, 190, 187, 0.8);
+}
+
+.chatbox__user--busy {
+  background: rgba(252, 100, 113, 0.8);
+}
+
+.chatbox__user--away {
+  background: rgba(255, 253, 130, 0.8);
+}
+
+.chatbox p {
+  float: left;
+  text-align: left;
+  margin: -0.25em 2em;
+  font-size: 0.7em;
+  font-weight: 300;
+  color: #FFF;
+ /* width: 200px;*/
+}
+
+.chatbox form {
+  background: #222;
+}
+
+.chatbox form input {
+  /*background: rgba(255, 255, 255, 0.03);*/
+  background: rgb(68 71 82 / 47%);
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  border: none;
+  width: 75%;
+  padding: 1.2em;
+  outline: none;
+  color: rgba(255, 255, 255, 0.9);
+  font-weight: 300;
+}
+
+::-webkit-input-placeholder {
+  color: rgba(255, 255, 255, 0.9);
+}
+
+:-moz-placeholder {
+  color: rgba(255, 255, 255, 0.9);
+}
+
+::-moz-placeholder {
+  color: rgba(255, 255, 255, 0.9);
+}
+
+:-ms-input-placeholder {
+  color: rgba(255, 255, 255, 0.9);
+}
+
+   	@media(max-width: 560px){
+		#user h1 {
+		    font-size: 12px;
+		    } 
+		}
+
+	@media(max-width: 506px){
+		#user h1 {
+		    font-size: 10px;
+		    }   
+		}	
+
+	 @media(max-width: 361px) and (max-height: 641px) {
+        #chatWindow {
+	        max-height: 368px;
+	        width: 60vw;
+	        overflow: auto;
+	    
+        }
+
+		.chatbox {
+			/*background: rgba(255, 255, 255, 0.05);*/
+			background:rgb(2 3 12 / 72%);
+			/*width: 600px;*/
+	     	width: 80vw;
+		    /*height: 75%;*/
+			min-height: 410px;
+			max-height: 410px;
+			border-radius: 0.2em;
+			position: relative;
+			box-shadow: 1px 1px 12px rgba(0, 0, 0, 0.1);
+		}	
+
+		.forusersautoflow {
+			overflow: auto;
+	   		max-height: 360px;
+		}
+
+    }
+
+
+</style>
+
+
 </head>
 
 <body class="text-center">
-
 <div class="cover-container d-flex w-100 h-100 p-3 mx-auto flex-column">
     <header class="masthead mb-auto">
-        <!--<div class="inner">
-            <h3 class="masthead-brand">OMECLONE</h3>
-
-        </div>-->
     </header>
-
     <main role="main" class="inner cover container1">
         <div id="name">
             <br>
             <h1 class="cover-heading">OMECLONE</h1>
             <p class="lead">Let's Start Instant Messaging. Chat Room for Active Users.<br> <span
-                    style="font-size: small">No Registration, Stay
+                    style="font-size: small; color: yellow">No Registration, Stay
                 Anonymous!</span></p>
             <form id="usernameForm">
                 <div class="form-group">
-                    <div class="col-md-12">
+                    <div class="col-md-12 pt-2">
                         <label style="font-size: 20px">Create Username</label>
                         <div id="error"></div>
                         <div class="input-group">
@@ -254,7 +441,7 @@
                             </div>
                             <input type="text" class="form-control" id="username"
                                    placeholder="Username"
-                                   aria-describedby="inputGroupPrepend2" required="" maxlength="16"
+                                   aria-describedby="inputGroupPrepend2" required="" maxlength="14"
                                    oninvalid="this.setCustomValidity('Please Enter Your Username')"
                                    oninput="setCustomValidity('')">
                         </div>
@@ -265,38 +452,41 @@
             </form>
         </div>
         <div id="main">
-            <h1 class="cover-heading">OMECLONE</h1>
-            <br>
-            <div id="chat">
 
-                <div id="chatWindow"></div>
-                <div class="space"></div>
-                <form id="messageForm" name="form1">
-                    <div class="input-group">
-                        <input type="text" id="message" class="form-control" placeholder="Type Something.." required=""
-                               oninvalid="this.setCustomValidity('Please Type Something..')"
-                               oninput="setCustomValidity('')">
-                        <div class="input-group-append">
-                            <button class="btn btn-outline-secondary" type="submit">Send</button>
-                        </div>
+        	<div class='container' ng-cloak ng-app="chatApp">
+			 <h1 class="cover-heading">OMECLONE</h1>
+			 <br>
+			  <div id="chat" class='chatbox' ng-controller="MessageCtrl as chatMessage">
+			    <div id="user" class='chatbox__user-list'>
+			      	<h1 class="online_users">Online Users</h1>
+			      	<div class="forusersautoflow">   	
+				     	<div id="users">    
+				  		</div>	
+				  	</div>	
+			    </div>
+			    <div class="chatbox__messages">
+			      <div id="chatWindow" class="chatbox__messages__user-message">
+			        
+			      </div>
+
+			    </div>
+			    <form id="messageForm" name="form1">
+                    <div>
+                        <input type="text" id="message" placeholder="Type a message..." required=""
+                               oninvalid="this.setCustomValidity('Please type a message..')"
+                               oninput="setCustomValidity('')">  
                     </div>
+
                 </form>
-            </div>
-            <div id="user">
-                <div class="online-users-sec">Online Users</div>
-                <div class="space"></div>
-                <div id="users" class="users"></div>
-            </div>
+			  </div>
         </div>
     </main>
     <br>
     <br>
     <footer class="mastfoot mt-auto foot">
         <small>
-            <div class="inner">
-                &copy; 2018 Omeclone | All Rights Reserved | Made with ❤ by <a
-                    href="https://www.facebook.com/purveshmakode007">@pm24</a>
-                <div class="space"></div>
+            <div class="inner" style="color: white">
+                &copy; 2018 Omeclone | P.M.
             </div>
         </small>
     </footer>
@@ -329,16 +519,16 @@
                     $('#name').hide();
                     $('#main').show();
                 } else {
-                    $error.html('Username is already taken');
+                    $error.html('<p style="color: red;">Username is already taken</p>');
                 }
             });
             $username.val('');
         });
 
         socket.on('usernames', function (data) {
-            var html = '';
+            var html = "";
             for (i = 0; i < data.length; i++) {
-                html += data[i] + '<br/>';
+                html += "<div class='chatbox__user--active'><p>"+data[i]+"</p></div>";
             }
             $users.html(html);
         })
@@ -349,8 +539,19 @@
             $message.val('');
         });
 
+        function formatAMPM(date) {
+		  var hours = date.getHours();
+		  var minutes = date.getMinutes();
+		  var ampm = hours >= 12 ? 'pm' : 'am';
+		  hours = hours % 12;
+		  hours = hours ? hours : 12; // the hour '0' should be '12'
+		  minutes = minutes < 10 ? '0'+minutes : minutes;
+		  var strTime = hours + ':' + minutes + ' ' + ampm;
+		  return strTime;
+		}
+
         socket.on('new message', function (data) {
-            $chat.append('<strong>' + data.user + '</strong>: ' + data.msg + '<br/>');
+            $chat.append('<div class="chatbox__messages__user-message--ind-message"><p class="name"><strong>'+data.user+':</strong></p><br/><p class="message float-left">'+data.msg +'</p><br/><p class="float-right">'+formatAMPM(new Date) +'</p></div>');
         });
     })
 </script>
